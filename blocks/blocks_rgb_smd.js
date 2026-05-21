@@ -1,44 +1,17 @@
 Blockly.defineBlocksWithJsonArray(
 [{
   "type": "rgb_smd_setup",
-  "message0": "Configurar LED RGB KidBright -> R: %1 G: %2 B: %3",
+  "message0": "Configurar LED RGB Pines -> R: %1 G: %2 B: %3",
   "args0": [
-    {
-      "type": "field_dropdown",
-      "name": "pin_r",
-      "options": [
-        ["OUT1 (Pin 26)", "26"],
-        ["OUT2 (Pin 27)", "27"],
-        ["SDA / Chain (Pin 4)", "4"],
-        ["SCL / Chain (Pin 5)", "5"]
-      ]
-    },
-    {
-      "type": "field_dropdown",
-      "name": "pin_g",
-      "options": [
-        ["OUT1 (Pin 26)", "26"],
-        ["OUT2 (Pin 27)", "27"],
-        ["SDA / Chain (Pin 4)", "4"],
-        ["SCL / Chain (Pin 5)", "5"]
-      ]
-    },
-    {
-      "type": "field_dropdown",
-      "name": "pin_b",
-      "options": [
-        ["OUT1 (Pin 26)", "26"],
-        ["OUT2 (Pin 27)", "27"],
-        ["SDA / Chain (Pin 4)", "4"],
-        ["SCL / Chain (Pin 5)", "5"]
-      ]
-    }
+    { "type": "input_value", "name": "pin_r", "check": "Number" },
+    { "type": "input_value", "name": "pin_g", "check": "Number" },
+    { "type": "input_value", "name": "pin_b", "check": "Number" }
   ],
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
   "colour": "#8E44AD",
-  "tooltip": "Asigna los pines físicos externos de la KidBright32 para los canales de color.",
+  "tooltip": "Configura los tres pines PWM de la ESP32 conectados a los canales R, G y B del módulo.",
   "helpUrl": ""
 },
 {
