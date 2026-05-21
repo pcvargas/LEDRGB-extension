@@ -1,8 +1,7 @@
 Blockly.Python['rgb_smd_setup'] = function(block) {
-  // Extrae el valor directamente del campo Dropdown seleccionado
-  var value_r = block.getFieldValue('pin_r');
-  var value_g = block.getFieldValue('pin_g');
-  var value_b = block.getFieldValue('pin_b');
+  var value_r = Blockly.Python.valueToCode(block, 'pin_r', Blockly.Python.ORDER_ATOMIC) || '18';
+  var value_g = Blockly.Python.valueToCode(block, 'pin_g', Blockly.Python.ORDER_ATOMIC) || '19';
+  var value_b = Blockly.Python.valueToCode(block, 'pin_b', Blockly.Python.ORDER_ATOMIC) || '23';
   
   Blockly.Python.definitions_['import_machine_rgb_pwm'] = 'import machine';
 
